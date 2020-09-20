@@ -16,3 +16,4 @@ These blogs and articles can be useful in addition to the official docs to show 
 * [Kotest migration guide by Paweł Weselak (2020)](https://pawelweselak.com/posts/kotest-migration-guide/)
 * [Micronaut and KotlinTest by Ben (2020)](https://www.nerd.vision/post/micronaut-and-kotlintest)
 * [Parameterized tests with Kotest (2020)](https://kotlintesting.com/kotest-parameterized/)
+* [Using Kotest with JUnit Jupiter (2020)](https://webcodr.io/2020/08/kotest-and-junit-with-intellij-or-dont-frak-up-your-toolchain-upgrades/)
