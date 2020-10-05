@@ -66,7 +66,7 @@ class SoftAssertionsTest : FreeSpec({
                arrayOf("foo") shouldBe arrayOf("bar")
             }
          }.let {
-            it.message should contain("9) expected:<[\"bar\"]> but was:<[\"foo\"]>")
+            it.message should contain("9) Elements differ at index 0: expected:<\"bar\"> but was:<\"foo\">")
             it.message shouldNot contain("10) ")
          }
       }
