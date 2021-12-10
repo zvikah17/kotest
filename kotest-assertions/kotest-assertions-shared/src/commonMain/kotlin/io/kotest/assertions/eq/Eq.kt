@@ -2,6 +2,7 @@ package io.kotest.assertions.eq
 
 import io.kotest.assertions.AssertionsConfig
 import io.kotest.assertions.show.show
+import io.kotest.assertions.failure
 
 /**
  * A [Eq] typeclass compares two values for equality, returning an [AssertionError] if they are
@@ -43,9 +44,9 @@ private fun <T> shouldShowDataClassDiff(actual: T, expected: T) =
    AssertionsConfig.showDataClassDiff && isDataClassInstance(actual) && isDataClassInstance(expected)
 
 fun actualIsNull(expected: Any): AssertionError {
-   return AssertionError("Expected ${expected.show().value} but actual was null")
+   return failure("Expected ${expected.print().value} but actual was null")
 }
 
 fun expectedIsNull(actual: Any): AssertionError {
-   return AssertionError("Expected null but actual was ${actual.show().value}")
+   return failure("Expected null but actual was ${actual.print().value}")
 }

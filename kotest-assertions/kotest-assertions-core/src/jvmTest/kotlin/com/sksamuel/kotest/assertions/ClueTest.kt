@@ -134,6 +134,19 @@ class ClueTest : FreeSpec({
          }
          ex.message shouldBe "null\nexpected:<2> but was:<1>"
       }
+
+      "clue should work where expected or actual is null" {
+         shouldThrow<AssertionError> {
+            withClue("A expected is null value") {
+               "hello" shouldBe null
+            }
+         }.message shouldBe "A expected is null value\nExpected null but actual was \"hello\""
+         shouldThrow<AssertionError> {
+            withClue("A actual is null value") {
+               null shouldBe "hello"
+            }
+         }.message shouldBe "A actual is null value\nExpected \"hello\" but actual was null"
+      }
    }
 
 })
